@@ -40,7 +40,7 @@ impl Party {
         v_blinding: Scalar,
         n: usize,
     ) -> Result<PartyAwaitingPosition<'a>, MPCError> {
-        if !(n == 8 || n == 16 || n == 32 || n == 64) {
+        if !(n == 7 || n == 8 || n == 16 || n == 32 || n == 64) {
             return Err(MPCError::InvalidBitsize);
         }
         if bp_gens.gens_capacity < n {
